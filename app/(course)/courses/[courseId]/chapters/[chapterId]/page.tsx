@@ -101,15 +101,15 @@ const ChapterIdPage = async ({
             <>
               <Separator />
               <div className="p-4">
-                {attachments.map((attachment) => (
+                {attachments.map((attachment, index) => (
                   <a
                     href={attachment.url}
                     target="_blank"
                     key={attachment.id}
-                    className="flex items-center p-3 w-full bg-sky-200 border text-sky-700 rounded-md hover:underline"
+                    className="flex items-center p-3 w-full bg-sky-200 border text-sky-700 rounded-md hover:underline mb-4"
                   >
                     <File />
-                    <p className="line-clamp-1">{attachment.name}</p>
+                    <p className="line-clamp-1">Attachment {index + 1}</p>
                   </a>
                 ))}
               </div>
